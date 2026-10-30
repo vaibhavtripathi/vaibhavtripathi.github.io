@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaibhav Tripathi</title>
+  <meta name="description" content="Personal website of Vaibhav Tripathi — software engineer." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#" class="brand">Vaibhav Tripathi</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1>Vaibhav Tripathi</h1>
+      <p class="tagline">
+        Software engineer who enjoys building things that are simple, fast, and useful.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">See my work</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        I'm a software engineer with an interest in systems, developer tools, and
+        clean user experiences. This site is a small corner of the web where I share
+        what I'm working on and thinking about.
+      </p>
+      <p>
+        When I'm not writing code, I'm usually reading, tinkering with side projects,
+        or exploring new places.
+      </p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Project One</h3>
+          <p>A short description of what this project does and why it matters.</p>
+          <div class="tags"><span>Go</span><span>CLI</span></div>
+          <a class="card-link" href="https://github.com/vaibhavtripathi" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>Another project placeholder — swap this out with something you've shipped.</p>
+          <div class="tags"><span>TypeScript</span><span>Web</span></div>
+          <a class="card-link" href="https://github.com/vaibhavtripathi" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>Experiments, prototypes, and small tools that solved a real problem.</p>
+          <div class="tags"><span>Python</span><span>Tooling</span></div>
+          <a class="card-link" href="https://github.com/vaibhavtripathi" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>The best way to reach me is through any of the links below.</p>
+      <ul class="contact-links">
+        <li><a href="https://github.com/vaibhavtripathi" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/vaibhavtripathi" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:hello@example.com">Email</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Vaibhav Tripathi. Built with plain HTML &amp; CSS.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
