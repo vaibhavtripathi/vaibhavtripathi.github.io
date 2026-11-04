@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vaibhav Tripathi</title>
   <meta name="description" content="Personal website of Vaibhav Tripathi — software engineer." />
+  <meta name="theme-color" content="#f6f2ea" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
       <a href="#" class="brand">Vaibhav Tripathi</a>
+      <span class="masthead-meta">Vol. 01 — Software Engineer</span>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -20,64 +25,71 @@
   </header>
 
   <main>
-    <section class="hero">
-      <p class="eyebrow">Hi, I'm</p>
-      <h1>Vaibhav Tripathi</h1>
-      <p class="tagline">
-        Software engineer who enjoys building things that are simple, fast, and useful.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#projects">See my work</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
-      </div>
-    </section>
+    <div class="bento">
+      <section class="tile t-hero">
+        <span class="big-letter" aria-hidden="true">V</span>
+        <p class="label">Hi, I'm Vaibhav</p>
+        <h1 class="serif">Building software that is <em>simple</em>, fast, and <em>useful</em>.</h1>
+        <p class="tagline">Interested in systems, developer tools, and clean user experiences.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">See my work</a>
+          <a class="btn btn-text" href="#contact">Get in touch</a>
+        </div>
+      </section>
 
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>
-        I'm a software engineer with an interest in systems, developer tools, and
-        clean user experiences. This site is a small corner of the web where I share
-        what I'm working on and thinking about.
-      </p>
-      <p>
-        When I'm not writing code, I'm usually reading, tinkering with side projects,
-        or exploring new places.
-      </p>
-    </section>
+      <section class="tile t-stat">
+        <p class="label">Shipping since</p>
+        <div class="big serif">2018</div>
+        <p>and still enjoying it.</p>
+      </section>
 
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Project One</h3>
-          <p>A short description of what this project does and why it matters.</p>
-          <div class="tags"><span>Go</span><span>CLI</span></div>
-          <a class="card-link" href="https://github.com/vaibhavtripathi" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-        <article class="card">
-          <h3>Project Two</h3>
-          <p>Another project placeholder — swap this out with something you've shipped.</p>
-          <div class="tags"><span>TypeScript</span><span>Web</span></div>
-          <a class="card-link" href="https://github.com/vaibhavtripathi" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-        <article class="card">
-          <h3>Project Three</h3>
-          <p>Experiments, prototypes, and small tools that solved a real problem.</p>
-          <div class="tags"><span>Python</span><span>Tooling</span></div>
-          <a class="card-link" href="https://github.com/vaibhavtripathi" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-      </div>
-    </section>
+      <section class="tile t-avail">
+        <p class="label"><span class="dot"></span>&nbsp; Status</p>
+        <h3 class="serif">Open to <i>interesting</i> problems</h3>
+      </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>The best way to reach me is through any of the links below.</p>
-      <ul class="contact-links">
-        <li><a href="https://github.com/vaibhavtripathi" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/vaibhavtripathi" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="mailto:hello@example.com">Email</a></li>
-      </ul>
-    </section>
+      <section id="contact" class="tile t-contact">
+        <div>
+          <p class="label">Correspondence</p>
+          <h2 class="serif">Let's <i>talk</i>.</h2>
+        </div>
+        <ul class="contact-links">
+          <li><a href="https://github.com/vaibhavtripathi" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/vaibhavtripathi" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:hello@example.com">Email</a></li>
+        </ul>
+      </section>
+
+      <section id="about" class="tile t-about">
+        <p class="label">About</p>
+        <p>Software engineer with an interest in systems, developer tools, and clean user experiences.</p>
+        <p>Off the keyboard: reading, side projects, exploring new places.</p>
+      </section>
+
+      <a id="projects" class="tile proj t-p1" href="https://github.com/vaibhavtripathi" target="_blank" rel="noopener">
+        <span class="num">No. 1</span>
+        <p class="label">Featured</p>
+        <h3 class="serif">Project One</h3>
+        <p>A short description of what this project does and why it matters.</p>
+        <div class="tags"><span>Go</span><span>CLI</span></div>
+      </a>
+
+      <a class="tile proj t-p2" href="https://github.com/vaibhavtripathi" target="_blank" rel="noopener">
+        <span class="num">No. 2</span>
+        <p class="label">Project</p>
+        <h3 class="serif">Project Two</h3>
+        <p>Another project placeholder — swap this out with something you've shipped.</p>
+        <div class="tags"><span>TypeScript</span><span>Web</span></div>
+      </a>
+
+      <a class="tile proj t-p3" href="https://github.com/vaibhavtripathi" target="_blank" rel="noopener">
+        <span class="num">No. 3</span>
+        <p class="label">Project</p>
+        <h3 class="serif">Project Three</h3>
+        <p>Experiments, prototypes, and small tools that solved a real problem.</p>
+        <div class="tags"><span>Python</span><span>Tooling</span></div>
+      </a>
+    </div>
   </main>
 
   <footer class="site-footer">
