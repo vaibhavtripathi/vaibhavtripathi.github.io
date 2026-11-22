@@ -105,6 +105,33 @@ main { flex: 1 1 auto; min-height: 0; padding: var(--pad); display: flex; }
   transition: background 0.2s;
 }
 .tile:hover { background: var(--tile-hover); }
+
+/* 3D pop-out on hover: tile lifts toward the viewer, siblings stay put.
+   Hover-capable pointers only (touch would leave a tile stuck "up"). */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .bento { perspective: 1400px; }
+  /* desktop fits one screen; don't let a lifted edge tile spawn a scrollbar */
+  @media (min-width: 1025px) { body { overflow: hidden; } }
+  .tile {
+    transform: translateZ(0);
+    transform-origin: center;
+    transition: background 0.2s, transform 0.38s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.38s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: transform;
+  }
+  .tile:hover {
+    z-index: 5;
+    transform: translateZ(28px) translateY(-3px);
+    box-shadow:
+      0 1px 0 var(--line),
+      0 12px 24px -10px rgba(29, 23, 38, 0.28),
+      0 28px 48px -16px rgba(75, 31, 130, 0.22);
+  }
+  /* hairline grid shows through the gap; give the lifted tile a crisp edge */
+  .tile:hover::before {
+    content: ""; position: absolute; inset: -1px; z-index: -1; pointer-events: none;
+    border: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
+  }
+}
 .tile p { overflow: hidden; color: var(--muted); line-height: 1.55; }
 .proj p:not(.label) { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
 
