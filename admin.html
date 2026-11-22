@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Admin — vaibhavtripathi.github.io</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header class="a-top">
+    <div class="a-brand">
+      <span class="a-logo">◈</span>
+      <strong id="brandTitle">Theme Lab</strong>
+      <span class="a-sub" id="brandSub">index.html · live preview</span>
+      <div class="a-seg a-view-seg" id="viewSeg">
+        <button data-view="theme" class="is-on">Theme</button>
+        <button data-view="write">Write</button>
+      </div>
+    </div>
+    <div class="a-top-mid" id="activePreset">Editorial</div>
+    <div class="a-top-actions" data-for="theme">
+      <button class="a-btn" id="btnShare" title="Copy a URL that reproduces this theme">Share link</button>
+      <button class="a-btn" id="btnReset" title="Back to the default Editorial theme">Reset</button>
+      <button class="a-btn a-btn-primary" id="btnExport">Export</button>
+    </div>
+    <div class="a-top-actions" data-for="write" hidden>
+      <span class="w-status" id="wStatus"></span>
+      <a class="a-btn" id="wOpen" href="#" target="_blank" rel="noopener" hidden>Open page ↗</a>
+      <button class="a-btn" id="wDelete" hidden>Delete</button>
+      <button class="a-btn a-btn-primary" id="wSave" disabled>Save</button>
+    </div>
+  </header>
+
+  <div class="a-shell">
+    <!-- ======================= Controls ======================= -->
+    <aside class="a-panel">
+      <p class="a-notice" id="fileNotice" hidden>
+        Opened via <code>file://</code> — browsers block the preview from being styled.
+        Run <code>python3 -m http.server 8000</code> and open
+        <a href="http://localhost:8000/admin.html">localhost:8000/admin.html</a>.
+      </p>
+
+      <details class="a-section" open>
+        <summary>Presets</summary>
+        <div class="a-preset-grid" id="presetGrid"></div>
+      </details>
+
+      <details class="a-section" open>
+        <summary>Colours</summary>
+        <div class="a-group" id="colorGroup"></div>
+        <div class="a-contrast" id="contrast"></div>
+      </details>
+
+      <details class="a-section" open>
+        <summary>Typography</summary>
+        <div class="a-group">
+          <label class="a-field">
+            <span>Title font</span>
+            <select id="displayFont"></select>
+          </label>
+          <div class="a-specimen a-specimen-display" id="specDisplay">Building <em>simple</em>, fast &amp; useful.</div>
+
+          <label class="a-field">
+            <span>Text font</span>
+            <select id="textFont"></select>
+          </label>
+          <div class="a-specimen a-specimen-text" id="specText">Interested in systems, developer tools, and clean user experiences.</div>
+
+          <div class="a-field a-inline">
+            <span>Custom Google Font</span>
+            <div class="a-row">
+              <input type="text" id="customFontName" placeholder="e.g. Literata" />
+              <select id="customFontCat" title="Fallback stack">
+                <option value="serif">serif</option>
+                <option value="sans">sans</option>
+                <option value="mono">mono</option>
+              </select>
+              <button class="a-btn a-btn-sm" id="addFontDisplay" title="Use as title font">Title</button>
+              <button class="a-btn a-btn-sm" id="addFontText" title="Use as text font">Text</button>
+            </div>
+          </div>
+
+          <div class="a-ranges" id="typeRanges"></div>
+        </div>
+      </details>
+
+      <details class="a-section">
+        <summary>Layout</summary>
+        <div class="a-ranges" id="layoutRanges"></div>
+      </details>
+    </aside>
+
+    <!-- ======================= Preview ======================= -->
+    <main class="a-stage">
+      <div class="a-toolbar">
+        <div class="a-seg" id="modeSeg">
+          <button data-mode="single" class="is-on">Single</button>
+          <button data-mode="compare">Compare</button>
+        </div>
+        <div class="a-chips" id="deviceChips"></div>
+        <div class="a-size" id="sizeBox">
+          <input type="number" id="customW" min="280" max="3840" step="1" title="Width" />
+          <span>×</span>
+          <input type="number" id="customH" min="280" max="2400" step="1" title="Height" />
+          <button class="a-btn a-btn-sm" id="btnRotate" title="Swap width and height">⟲</button>
+        </div>
+        <div class="a-toolbar-right">
+          <span class="a-zoom" id="zoomLabel">100%</span>
+          <button class="a-btn a-btn-sm" id="btnReload" title="Reload preview frames">Reload</button>
+        </div>
+      </div>
+      <div class="a-canvas" id="stage"></div>
+    </main>
+  </div>
+
+  <!-- ======================= Write ======================= -->
+  <div class="w-shell" id="writeShell" hidden>
+    <aside class="w-list">
+      <p class="a-notice" id="wNoServer" hidden>
+        Saving needs the local API. Stop <code>http.server</code> and run
+        <code>python3 admin_server.py</code> instead, then reload.
+      </p>
+      <div class="w-list-head">
+        <button class="a-btn a-btn-sm" id="wNewEssay">+ Essay</button>
+        <button class="a-btn a-btn-sm" id="wNewSnippet">+ Snippet</button>
+        <input type="search" id="wFilter" placeholder="Filter…" />
+      </div>
+      <div class="w-group"><h4>Essays</h4><ul id="wEssays"></ul></div>
+      <div class="w-group"><h4>Snippets</h4><ul id="wSnippets"></ul></div>
+    </aside>
+
+    <section class="w-editor" id="wEditor">
+      <div class="w-empty" id="wEmpty">
+        <p>Pick a post on the left, or start a new <b>Essay</b> / <b>Snippet</b>.</p>
+        <p class="a-help">Markdown: <code># heading</code> · <code>**bold**</code> · <code>*italic*</code> · <code>[link](url)</code> · <code>&gt; quote</code> · <code>- list</code> · <code>--</code> becomes an em dash.</p>
+      </div>
+      <form class="w-form" id="wForm" hidden autocomplete="off">
+        <div class="w-meta">
+          <label class="a-field w-grow"><span>Title</span><input id="fTitle" required placeholder="Title as it appears everywhere" /></label>
+          <label class="a-field"><span>Type</span>
+            <select id="fType"><option value="essay">Essay</option><option value="snippet">Snippet</option></select></label>
+          <label class="a-field"><span>Status</span>
+            <select id="fStatus"><option value="draft">Draft</option><option value="published">Published</option></select></label>
+          <label class="a-field"><span>Date</span><input id="fDate" type="date" /></label>
+        </div>
+        <div class="w-meta">
+          <label class="a-field w-grow"><span>Title with emphasis <i>(optional — use &lt;em&gt;…&lt;/em&gt; for the purple italic)</i></span><input id="fTitleHtml" placeholder="e.g. Life and &lt;em&gt;Laughter&lt;/em&gt;" /></label>
+          <label class="a-field w-slug"><span>Slug <i>(URL)</i></span><input id="fSlug" pattern="[a-z0-9]+(-[a-z0-9]+)*" placeholder="auto-from-title" /></label>
+          <label class="a-check"><input type="checkbox" id="fPinned" /><span>Pin to home tile</span></label>
+          <label class="a-check"><input type="checkbox" id="fFeatured" /><span>Feature on home</span></label>
+        </div>
+        <label class="a-field"><span>Lede <i>(optional one-liner under the title)</i></span><input id="fLede" /></label>
+        <label class="a-field w-body"><span>Body <i>(Markdown)</i></span>
+          <textarea id="fBody" spellcheck="true" placeholder="Start writing…"></textarea></label>
+        <div class="w-foot"><span id="wCount" class="a-zoom"></span><span class="a-help">⌘S / Ctrl+S saves · changes rebuild the site on disk · <code>git push</code> publishes</span></div>
+      </form>
+    </section>
+
+    <section class="w-preview">
+      <div class="w-preview-bar"><span>Preview</span><span class="a-zoom" id="wPreviewState"></span></div>
+      <iframe id="wFrame" title="Post preview"></iframe>
+    </section>
+  </div>
+
+  <!-- ======================= Export ======================= -->
+  <dialog class="a-dialog" id="exportDialog">
+    <form method="dialog">
+      <header>
+        <strong>Export theme</strong>
+        <button class="a-btn a-btn-sm" value="close" aria-label="Close">✕</button>
+      </header>
+
+      <p class="a-help">1 · Replace the <code>:root</code> block at the top of <code>style.css</code>:</p>
+      <div class="a-code-wrap">
+        <pre><code id="exportCss"></code></pre>
+        <button type="button" class="a-btn a-btn-sm a-copy" data-copy="exportCss">Copy</button>
+      </div>
+
+      <p class="a-help">2 · Replace the Google Fonts <code>&lt;link&gt;</code> in <code>index.html</code>:</p>
+      <div class="a-code-wrap">
+        <pre><code id="exportLink"></code></pre>
+        <button type="button" class="a-btn a-btn-sm a-copy" data-copy="exportLink">Copy</button>
+      </div>
+
+      <footer>
+        <button type="button" class="a-btn" id="btnDownloadCss">Download patched style.css</button>
+        <button class="a-btn a-btn-primary" value="close">Done</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <script src="admin.js"></script>
+  <script src="admin-write.js"></script>
+</body>
+</html>

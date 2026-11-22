@@ -1,0 +1,126 @@
+{
+  "posts": [
+    {
+      "slug": "i-like-to-get-sick-sometimes",
+      "type": "essay",
+      "title": "I like to get sick, sometimes",
+      "title_html": "I like to get sick, <em>sometimes</em>",
+      "status": "draft",
+      "date": "2026-11-22",
+      "pinned": true,
+      "lede": "",
+      "featured": false
+    },
+    {
+      "slug": "money-ceases-to-matter",
+      "type": "essay",
+      "title": "Money ceases to matter, except in our heads",
+      "title_html": "Money ceases to matter, <em>except in our heads</em>",
+      "status": "draft",
+      "date": "2026-11-22",
+      "pinned": true,
+      "lede": "",
+      "featured": false
+    },
+    {
+      "slug": "experiencing-and-understanding",
+      "type": "snippet",
+      "title": "Experiencing and understanding",
+      "title_html": "Experiencing and <em>understanding</em>",
+      "status": "draft",
+      "date": "2026-11-22",
+      "pinned": true,
+      "lede": "",
+      "featured": false
+    },
+    {
+      "slug": "world-of-humans",
+      "type": "snippet",
+      "title": "The world of humans",
+      "title_html": "The world of <em>humans</em>",
+      "status": "draft",
+      "date": "2026-11-22",
+      "pinned": true,
+      "lede": "",
+      "featured": false
+    },
+    {
+      "slug": "life-and-laughter",
+      "type": "snippet",
+      "title": "Life and Laughter",
+      "title_html": "Life and <em>Laughter</em>",
+      "status": "draft",
+      "date": "2026-11-22",
+      "pinned": true,
+      "lede": "",
+      "updated": "2026-11-22",
+      "featured": true
+    },
+    {
+      "slug": "writing-my-first-book",
+      "type": "snippet",
+      "title": "Writing my first book",
+      "title_html": "Writing my first <em>book</em>",
+      "status": "draft",
+      "date": "2026-11-22",
+      "pinned": false,
+      "lede": "",
+      "featured": false
+    },
+    {
+      "slug": "learning-to-make-ai-films",
+      "type": "snippet",
+      "title": "Learning to make AI films (not slop!)",
+      "title_html": "Learning to make AI films <em>(not slop!)</em>",
+      "status": "draft",
+      "date": "2026-11-22",
+      "pinned": false,
+      "lede": "",
+      "featured": false
+    },
+    {
+      "slug": "catching-up-with-generative-ai",
+      "type": "snippet",
+      "title": "Playing catch-up with the awesomeness of genAI",
+      "title_html": "Playing catch-up with the <em>awesomeness</em> of genAI",
+      "status": "draft",
+      "date": "2026-11-22",
+      "pinned": false,
+      "lede": "",
+      "featured": false
+    },
+    {
+      "slug": "as-a-software-engineer",
+      "type": "snippet",
+      "title": "As a software engineer",
+      "title_html": "As a <em>software engineer</em>",
+      "status": "draft",
+      "date": "2026-11-22",
+      "pinned": false,
+      "lede": "",
+      "featured": false
+    },
+    {
+      "slug": "as-a-thinker",
+      "type": "snippet",
+      "title": "As a thinker",
+      "title_html": "As a <em>thinker</em>",
+      "status": "draft",
+      "date": "2026-11-22",
+      "pinned": false,
+      "lede": "",
+      "featured": false
+    },
+    {
+      "slug": "as-an-aspiring-writer",
+      "type": "snippet",
+      "title": "As an aspiring writer",
+      "title_html": "As an <em>aspiring writer</em>",
+      "status": "draft",
+      "date": "2026-11-22",
+      "pinned": false,
+      "lede": "",
+      "featured": false
+    }
+  ]
+}

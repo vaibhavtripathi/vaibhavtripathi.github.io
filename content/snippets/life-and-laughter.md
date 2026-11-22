@@ -1,0 +1,1 @@
+Humans have a tendency to associate success and fulfilment to greatness and achievement. I argue that life and laughter are an indistinguishable part of a life well lived.
