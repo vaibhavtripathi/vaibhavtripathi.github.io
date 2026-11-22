@@ -296,7 +296,18 @@ main { flex: 1 1 auto; min-height: 0; padding: var(--pad); display: flex; }
   .t-p2      { grid-column: 1 / 4; grid-row: auto; }
   .t-p3      { grid-column: 4 / 7; grid-row: auto; }
   .tile p { overflow: visible; }
+  .tile { padding: 24px 22px; }
   .masthead-meta { display: none; }
+  /* auto-margins only space things out in the fixed-height desktop grid */
+  .sub-label { margin-top: 1.4em; }
+  .blog-heading { margin-bottom: 0.2em; }
+  .blog-all { margin-top: 1.4em; }
+  .contact-links { margin-top: 1.4em; }
+  .now-list { margin-top: 0.8em; }
+  .now-list li + li { margin-top: 0.8em; }
+  .t-personal { min-height: 300px; }
+  .t-featured p, .proj p { margin-top: 0.4em; }
+  .proj .tags { padding-top: 18px; }
   .site-footer { display: block; text-align: center; padding: 0 16px 20px; font-size: var(--text-min); }
 }
 
@@ -304,12 +315,24 @@ main { flex: 1 1 auto; min-height: 0; padding: var(--pad); display: flex; }
 @media (max-width: 600px) {
   :root { --text-min: calc(clamp(0.95rem, 4.5vw, 1.25rem) * var(--display-scale)); }
   .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: minmax(120px, auto); }
-  .t-hero    { grid-column: 1 / 3; min-height: 60dvh; }
+  .t-hero    { grid-column: 1 / 3; min-height: 0; padding-top: 6.5rem; padding-bottom: 2.2rem; }
+  .tile { padding: 28px 22px; }
+  .site-header { padding: 16px 0 12px; }
+  main { padding: 14px; }
+  .label { margin-bottom: 0.9em; }
+  .hero-lead { margin-bottom: 1.2em; }
+  .t-hero h1 { margin-bottom: 0.45em; }
+  .hero-through { margin-top: 0.4em; row-gap: 0.3em; }
+  .blog-list a { padding: 0.6em 0; }
+  .contact-links { gap: 16px 20px; }
+  .contact-links a { width: 40px; height: 40px; }
+  .t-personal { min-height: 340px; }
+  .site-footer { padding: 8px 16px 28px; }
   .t-avail, .t-blog, .t-contact, .t-about, .t-p1, .t-p2, .t-p3 { grid-column: 1 / 3; }
   .nav-links { display: none; }
   /* width-only type scale: vh-based sizes get too big on tall narrow screens */
   .t-hero h1 { font-size: calc(clamp(1.8rem, 9vw, 2.8rem) * var(--display-scale)); overflow-wrap: break-word; }
-  .t-hero .big-letter { font-size: clamp(10rem, 60vw, 16rem); }
+  .t-hero .big-letter { font-size: clamp(6rem, 34vw, 10rem); top: -0.22em; }
   .tile h2 { font-size: calc(clamp(1.1rem, 5.5vw, 1.6rem) * var(--display-scale)); }
   .tile h3 { font-size: var(--text-min); }
   .tile p { font-size: max(var(--text-min), calc(clamp(0.8rem, 3.6vw, 0.95rem) * var(--text-scale))); }
