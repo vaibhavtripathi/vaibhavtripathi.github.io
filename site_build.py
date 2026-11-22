@@ -34,8 +34,7 @@ TYPES = {
     "snippet": {"dir": "snippets", "out": "blog/snippets", "root": "../../", "label": "Snippet", "index_anchor": "#snippets"},
 }
 
-FONTS = ('<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;'
-         '0,9..144,600;1,9..144,300;1,9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />')
+FONTS = ('<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" rel="stylesheet" />')
 
 
 # ----------------------------------------------------------------------------

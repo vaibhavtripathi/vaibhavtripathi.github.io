@@ -228,7 +228,7 @@ body[data-view="write"] #activePreset { visibility: hidden; }
 .w-body { flex: 1; min-height: 0; }
 .w-body textarea {
   flex: 1; min-height: 240px; resize: none; line-height: 1.6; font-size: 14px;
-  font-family: "Fraunces", Georgia, serif; tab-size: 2;
+  font-family: "Newsreader", Georgia, serif; tab-size: 2;
 }
 .w-foot { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
 

@@ -1,6 +1,6 @@
 /* ==================================================================
    vaibhavtripathi.github.io — "Editorial" bento theme
-   Purple + yellow on paper. Fraunces (display) + Inter (text).
+   Purple + yellow on paper. Newsreader for both display and text.
 
    Layout:
      Desktop : 12 cols × 6 rows, fills exactly 100dvh (no scroll).
@@ -27,8 +27,8 @@
   --on-yellow: #1d1726; /* headings + links on the yellow tile */
 
   /* Type */
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-text: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-text: "Newsreader", Georgia, "Times New Roman", serif;
   --display-weight: 300;
   --display-tracking: -0.01em;
   --display-scale: 1; /* multiplier on heading sizes */

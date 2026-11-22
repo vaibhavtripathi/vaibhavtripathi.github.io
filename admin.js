@@ -86,7 +86,7 @@
       text: '#1d1726', muted: '#6b6373', purple: '#4b1f82', purpleSoft: '#ebe2f6',
       onPurple: '#f6f2ea', yellow: '#f2c53d', yellowInk: '#5c4a05', onYellow: '#1d1726',
     },
-    displayFont: 'Fraunces', textFont: 'Inter',
+    displayFont: 'Newsreader', textFont: 'Newsreader',
     displayWeight: 300, displayTracking: -0.01, displayScale: 1, textScale: 1,
     gap: 1, radius: 0,
     customFonts: [],

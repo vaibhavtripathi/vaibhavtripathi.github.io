@@ -6,9 +6,8 @@ Plain HTML + CSS — no build step.
 
 ## Design
 
-"Editorial" bento layout — purple + yellow on paper, with
-[Fraunces](https://fonts.google.com/specimen/Fraunces) for display type and
-[Inter](https://fonts.google.com/specimen/Inter) for text (loaded from Google Fonts).
+"Editorial" bento layout — purple + yellow on paper, set entirely in
+[Newsreader](https://fonts.google.com/specimen/Newsreader) (loaded from Google Fonts).
 
 - **Desktop (>1024px):** 12×6 grid that fills exactly one viewport, no scroll.
   Type uses `vw + vh` clamps so tiles stay filled on wide and tall screens.
