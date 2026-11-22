@@ -121,6 +121,18 @@
       "pinned": false,
       "lede": "",
       "featured": false
+    },
+    {
+      "slug": "my-first-ai-film",
+      "type": "snippet",
+      "title": "Here's my first AI film (attempt)",
+      "title_html": "Here's my first AI film <em>(attempt)</em>",
+      "status": "draft",
+      "pinned": false,
+      "featured": false,
+      "date": "2026-11-22",
+      "lede": "",
+      "updated": "2026-11-22"
     }
   ]
 }

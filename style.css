@@ -284,6 +284,7 @@ main { flex: 1 1 auto; min-height: 0; padding: var(--pad); display: flex; }
 /* ---------- Projects ---------- */
 .proj .num { position: absolute; top: 14px; right: 16px; font-family: var(--font-display); font-style: italic; color: var(--muted); font-size: max(var(--text-min), clamp(0.9rem, 0.9vw, 1.2rem)); }
 .proj h3 { margin: 0.4em 0 0.4em; font-weight: 600; padding-right: 30px; }
+.proj h3 em { font-weight: var(--display-weight); }
 .proj .tags { margin-top: auto; padding-top: 10px; }
 .proj .tags span { letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .proj .tags span::before { content: "· "; color: var(--yellow); font-weight: 700; }
